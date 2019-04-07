@@ -4,8 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.andy.uts_andydarmawan_mi2d.models.fragment.LoginFragment;
-import com.andy.uts_andydarmawan_mi2d.models.fragment.NoteFragment;
+import com.andy.uts_andydarmawan_mi2d.fragment.LoginFragment;
+import com.andy.uts_andydarmawan_mi2d.fragment.NoteFragment;
 
 public class MainActivity extends AppCompatActivity {
 

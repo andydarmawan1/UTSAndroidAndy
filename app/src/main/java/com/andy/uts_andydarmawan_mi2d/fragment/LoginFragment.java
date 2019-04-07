@@ -1,4 +1,4 @@
-package com.andy.uts_andydarmawan_mi2d.models.fragment;
+package com.andy.uts_andydarmawan_mi2d.fragment;
 
 
 import android.os.Bundle;
