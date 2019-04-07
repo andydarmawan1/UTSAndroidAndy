@@ -41,4 +41,10 @@ public class Settings {
                 .apply();
     }
 
+    public float getTextSize() {
+        String textSize = preferences.getString(Constant.PREF_TEXT_SIZE, "20");
+        return Float.parseFloat(textSize);
+    }
+
+
 }
