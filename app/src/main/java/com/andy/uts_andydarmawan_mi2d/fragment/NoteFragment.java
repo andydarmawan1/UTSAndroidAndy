@@ -84,4 +84,6 @@ public class NoteFragment extends Fragment {
         return super.onOptionsItemSelected(item);
     }
 
+
+
 }

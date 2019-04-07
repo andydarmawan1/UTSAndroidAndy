@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.andy.uts_andydarmawan_mi2d.MainActivity;
 import com.andy.uts_andydarmawan_mi2d.R;
 
 /**
@@ -42,8 +43,13 @@ public class LoginFragment extends Fragment {
         return view;
     }
 
+    public void setListener(OnLoginFragmentListener listener) {
+        this.listener = listener;
+    }
+
     public interface OnLoginFragmentListener {
         void onLoginClicked(View view, String username, String password);
+
     }
 
 }
