@@ -9,8 +9,9 @@ import com.andy.uts_andydarmawan_mi2d.fragment.LoginFragment;
 import com.andy.uts_andydarmawan_mi2d.fragment.NoteFragment;
 import com.andy.uts_andydarmawan_mi2d.models.User;
 
-public class MainActivity extends AppCompatActivity implements LoginFragment.OnLoginFragmentListener {
+public class MainActivity extends AppCompatActivity implements LoginFragment.OnLoginFragmentListener, NoteFragment.OnNoteFragmentListener {
 
+    private static final String TAG = MainActivity.class.getSimpleName();
     private Settings settings;
     private Session session;
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements LoginFragment.OnL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         settings = new Settings(this);
         session = new Session(settings);
@@ -29,9 +31,11 @@ public class MainActivity extends AppCompatActivity implements LoginFragment.OnL
         Fragment fragment = null;
         if (session.isLogin()) {
             fragment = new NoteFragment();
+            ((NoteFragment) fragment).setListener(this);
         } else {
             fragment = new LoginFragment();
             ((LoginFragment) fragment).setListener(this);
+
         }
 
         getSupportFragmentManager().beginTransaction()
@@ -48,7 +52,19 @@ public class MainActivity extends AppCompatActivity implements LoginFragment.OnL
             session.setUser(username);
             addFragment();
         }
-//
+//        Snackbar.make(view, message, Snackbar.LENGTH_SHORT).show(););
+
     }
+
+    @Override
+    public void onRegisterLinkClicked() {
+
     }
+
+    @Override
+    public void onLogoutClick() {
+        session.doLogout();
+        addFragment();
+    }
+}
 

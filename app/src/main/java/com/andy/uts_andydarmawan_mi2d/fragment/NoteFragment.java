@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 
 import com.andy.uts_andydarmawan_mi2d.Constant;
 import com.andy.uts_andydarmawan_mi2d.Data;
+import com.andy.uts_andydarmawan_mi2d.MainActivity;
 import com.andy.uts_andydarmawan_mi2d.R;
 import com.andy.uts_andydarmawan_mi2d.adapter.NoteAdapter;
 
@@ -25,6 +26,7 @@ import com.andy.uts_andydarmawan_mi2d.adapter.NoteAdapter;
 public class NoteFragment extends Fragment {
     private RecyclerView recyclerView;
     private NoteAdapter adapter;
+    private OnNoteFragmentListener listener;
 
 
     public NoteFragment() {
@@ -82,6 +84,14 @@ public class NoteFragment extends Fragment {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void setListener(LoginFragment.OnLoginFragmentListener listener) {
+
+    }
+
+    public interface OnNoteFragmentListener {
+        void onLogoutClick();
     }
 
 
