@@ -19,8 +19,6 @@
             android:paddingTop="4dp"
             android:paddingLeft="24dp"
             android:paddingRight="24dp"
-
-
             android:src="@drawable/logo" />
 
         <!-- Username Label -->
