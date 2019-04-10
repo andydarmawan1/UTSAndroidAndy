@@ -78,7 +78,8 @@ public class NoteFragment extends Fragment {
             case R.id.action_show_grid:
                 displayAsGrid();
                 return true;
-
+            case R.id.action_show_Story:
+                return true;
             case R.id.action_logout:
                 return true;
         }

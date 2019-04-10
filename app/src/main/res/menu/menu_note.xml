@@ -15,8 +15,14 @@
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/action_logout"
+        android:id="@+id/action_show_Story"
         android:orderInCategory="99"
+        android:title="Add Story"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="100"
         android:title="Logout"
         app:showAsAction="never" />
 
