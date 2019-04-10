@@ -1,14 +1,25 @@
 package com.andy.uts_andydarmawan_mi2d.models;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+@Entity(tableName = "notes")
 
 public class Note {
 
     private String title;
     private Date date;
     private String content;
+
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
+    private Long id;
+
+
 
     public Note(String title, Date date, String content) {
         this.title = title;
